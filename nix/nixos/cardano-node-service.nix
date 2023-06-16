@@ -111,7 +111,7 @@ let
       "--topology ${topology}"
     ] ++ lib.optionals (!cfg.systemdSocketActivation) ([
       "--host-addr ${cfg.hostAddr}"
-      "--port ${toString (cfg.port + i)}"
+      "--port ${if cfg.shareIpv4port then toString cfg.port else toString (cfg.port + i)}"
       "--socket-path ${cfg.socketPath i}"
     ] ++ lib.optionals (cfg.ipv6HostAddr i != null) [
       "--host-ipv6-addr ${cfg.ipv6HostAddr i}"

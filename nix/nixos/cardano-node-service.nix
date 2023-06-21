@@ -104,7 +104,8 @@ let
       ];
     };
     instanceDbPath = cfg.databasePath i;
-    cmd = builtins.filter (x: x != "") [
+    cmd = builtins.filter (x: lib.debug.traceSeq (__toJSON x) true) [
+    # cmd = builtins.filter (x: x != "") [
       "${cfg.executable} run"
       "--config ${nodeConfigFile}"
       "--database-path ${instanceDbPath}"

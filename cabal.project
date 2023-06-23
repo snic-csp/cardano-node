@@ -62,7 +62,7 @@ source-repository-package
   type: git
   location: https://github.com/input-output-hk/ouroboros-consensus
   tag: eab16f2ccc7d8adc8c7eaad7917b4cf7815ac6c2
-  -- sha256: 08lp7pj958jkc7dqa5j353b02mn6y1hk5sh5wxy63zdjf2xciyr7
+  --sha256: 08lp7pj958jkc7dqa5j353b02mn6y1hk5sh5wxy63zdjf2xciyr7
   subdir:
    ouroboros-consensus
    ouroboros-consensus-protocol
